@@ -1,0 +1,93 @@
+1.//Problem Statement
+ //Print The Name By Using Function .
+import java.util.Scanner;
+public class Day13 {
+
+    public static void  printMyName(String tanuja) {
+        System.out.println(tanuja);
+        return ;
+        
+    }
+    public static void main(String args[]){
+        Scanner sc = new Scanner (System.in);
+        String tanuja =sc.next();
+        printMyName(tanuja); // function call
+    }
+}
+
+
+2.//Problem Statement
+// make the function to sum of two numbers
+ import java.util.Scanner;
+ public class Day13 {
+     public static int  CalculateSum(int a, int b) {
+         int sum = a + b;
+         return sum;
+     }
+
+     public static void main(String args[]) {
+         Scanner sc = new Scanner(System.in);
+         int a = sc.nextInt();
+         int b = sc.nextInt();
+         int sum =CalculateSum(a,b);
+
+         System.out.println(sum);
+     }
+ } 
+
+3.//problem statement
+// make a function to multiply to numbers and return the product
+
+import java.util.Scanner;
+public class Day13{
+    public static int calculateProduct(int a,int b){
+
+        return a*b;
+
+    }
+
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in );
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println(" product of two numbers is:" +calculateProduct(a,b) );
+
+
+    }
+}
+
+
+4.//Problem Statement
+// Find The Factorial Of Two Numbers
+
+import java.util.Scanner;
+
+public class Day13 {
+
+    public static int printFactorial(int n) {
+        if (n < 0) {
+            System.out.println("Invalid Number ");
+            return -1;
+        }
+
+        int factorial = 1;
+        for (int i = 1; i <= n; i++) {
+            factorial = factorial * i;
+        }
+
+        return factorial;
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        int result = printFactorial(n);
+        if (result != -1) {
+            System.out.println("Factorial is: " + result);
+        }
+    }
+}
+
+
