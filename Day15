@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Day15 {
+    public static void main(String args[]) {
+
+      /*  Scanner sc= new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc. nextInt();
+
+        for(int i=0;i<n;i++){
+                System.out.println("Hello");
+            }
+        for(int j=0;j<n;j++){
+            System.out.println("Riddhi");
+        }*/
+
+//2. space omplexity is not depends on the  input size
+
+         /*   Scanner sc = new Scanner(System.in);
+            int n =sc.nextInt();
+            for(int i=0;i<n;i++){
+                System.out.println("hello");
+            }
+        }
+    }
+    */
+
+
+    3.//today iam officically start the concept of Arrays
+
+        //int[] marks = new int[3];
+        int marks[] =new int[3];
+
+        marks[0] = 97;
+        marks[1] = 98;
+        marks[2] = 95;
+
+   /* System.out.println(marks[0]);
+    System.out.println(marks[1]);
+    System.out.println(marks[2]);*/
+        for (int i = 0; i < 3; i++) {
+            System.out.println(marks[i]);
+        }
+    }
+}
