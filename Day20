@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Day20 {
+    public static void main(String args[]){
+        String name1="Riddhi";
+        String name2 ="Riddhi";
+
+        // s1 > s2 : +ve value
+        //s2 < s2 : -ve value
+        //s1==s2 :0
+
+         if(name1.compareTo(name2)==0) { // we can use copareTo because it is better than ==
+            System.out.println("Strings are equal");
+        }else{
+            System.out.println("Strings are not equal");
+
+            if(name1==name2) {
+                System.out.println("Strings are equal");
+            }else{
+                System.out.println("Strings are not equal");
+
+        if(new String("Riddhi")== new String("Riddhi")) {
+            System.out.println("Strings are equal");
+        }else {
+            System.out.println("Strings are NOT equal");
+
+        String Sentence ="TonyStark";
+        String name = Sentence.substring(4);
+        System.out.println(name);
+
+        //Strings are immutable == when once we can create the string then cannot change it!
+            }
+
+    }
+
