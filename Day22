@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class Day22 {
+    public static void main(String args[]){
+        StringBuilder sb= new StringBuilder("h");
+        sb.append ("e");
+        sb.append("l");
+        sb.append("l");
+        sb.append("o");
+        System.out.println(sb);
+    System.out.println(sb.length());
+
+
+//Add Characters One by One
+//Q.1 Create a StringBuilder with "C", and append "o", "d", "e", then print the final word.
+
+StringBuilder C = new StringBuilder("c");
+C.append("o");
+C.append("d");
+C.append("e");
+
+System.out.println(C);
+
+
+//Count Length of a Word
+//Create a StringBuilder with any word (e.g., "Java"), and print its length.
+
+StringBuilder R = new StringBuilder("Java");
+
+System.out.println(R.length());
+
+
+//Replace a Character
+//Given "Hello", change 'H' to 'Y' using setCharAt() and print the result.
+
+StringBuilder P = new StringBuilder("Hello");
+      R.setCharAt(0,'Y');
+      System.out.println(P);
+
+//        Delete Characters
+// Start with "Programming" and delete characters from index 3 to 6. Print the result.
+
+        StringBuilder S = new StringBuilder("Programming");
+        S.delete(3,'6');
+        System.out.println(S);
+
+
+    }
+}
