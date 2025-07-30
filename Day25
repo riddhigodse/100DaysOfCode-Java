@@ -1,0 +1,121 @@
+import java.util.Stack;
+
+class Solution {
+    public String decodeString(String s) {
+        Stack<Integer> countStack = new Stack<>();
+        Stack<StringBuilder> stringStack = new Stack<>();
+        StringBuilder current = new StringBuilder();
+        int k = 0;
+
+        for (char ch : s.toCharArray()) {
+            if (Character.isDigit(ch)) {
+                k = k * 10 + (ch - '0');
+            } else if (ch == '[') {
+                countStack.push(k);
+                stringStack.push(current);
+                current = new StringBuilder();
+                k = 0;
+            } else if (ch == ']') {
+                StringBuilder decodedString = stringStack.pop();
+                int currentK = countStack.pop();
+                for (int i = 0; i < currentK; i++) {
+                    decodedString.append(current);
+                }
+                current = decodedString;
+            } else {
+                current.append(ch);
+            }
+        }
+
+        return current.toString();
+    }
+
+    public static void main(String[] args) {
+        Solution obj = new Solution();
+
+        String s1 = "3[a]2[bc]";
+        String s2 = "3[a2[c]]";
+        String s3 = "2[abc]3[cd]ef";
+
+        System.out.println(obj.decodeString(s1));
+        System.out.println(obj.decodeString(s2));
+        System.out.println(obj.decodeString(s3));
+    }
+}
+
+
+import java.util.Scanner;
+public class Day25 {
+    public static void main(String args[]) {
+
+//  Given a string str, reverse it manually without using the reverse() method from StringBuilder or any built-in functions.
+//
+//                Input: "riddhi"
+//        Output: "ihddir"
+
+//        StringBuilder sb = new StringBuilder("Riddhi");
+//        for(int i=0; i<sb.length();i++){
+//            int front = 0;
+//            int back = sb.length()-1-i;
+//
+//            char frontchar = sb.charAt(front);
+//            char backchar = sb.charAt(back);
+//
+//            sb.setCharAt(front,backchar);
+//            sb.setCharAt(back,frontchar);
+//        }
+//      System.out.println(sb);
+//     System.out.println(sb.toString().toLowerCase());
+//    }
+//}
+
+//        1. Append Characters to Form a Word
+//
+//        Start with an empty StringBuilder and append characters one by one to create the word: Success.
+//                Print the final result.
+//
+//        StringBuilder sb = new StringBuilder("");
+//        sb.append("s");
+//        sb.append("u");
+//        sb.append("c");
+//        sb.append("c");
+//        sb.append("e");
+//        sb.append("s");
+//        sb.append("s");
+//
+//System.out.println(sb);
+//System.out.println(sb.length());
+//    }
+//}
+
+
+//2. Print Length of Created Word
+//
+//After creating a StringBuilder with the word Technology, print its length using .length().
+
+//        StringBuilder r = new StringBuilder("Technology");
+//        System.out.println(r.length());
+//        System.out.println(r.toString().toUpperCase());
+
+//        3. Change First and Last Character
+//
+//        Given: "World", change first character to 'M' and last character to 'n', then print result.
+//        Input: "World" → Output: "Morln"
+
+//        StringBuilder sb = new StringBuilder("World");
+//        sb.setCharAt(0,'M');
+//        sb.setCharAt(4,'n');
+//        System.out.println(sb);
+//
+//        4. Insert a Character in the Middle
+//
+//        Start with: "Rocket", insert 's' at index 3.
+//        Output: "Rocs ket"
+
+        StringBuilder sb = new StringBuilder("Rocket");
+        sb.insert(3,'s');
+        System.out.println(sb);
+
+    }
+}
+
