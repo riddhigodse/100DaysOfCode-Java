@@ -1,0 +1,87 @@
+import java.util.Scanner;
+public class Day26 {
+    public static void main(String args[]){
+        String name = "Riddhi";
+        System.out.println(name);
+
+        int value = name.length();
+        System.out.println(value);
+
+        System.out.println(name.length());
+
+        String lstring = name.toLowerCase();
+        System.out.println(lstring);
+
+        String ustring = name.toUpperCase();
+        System.out.println(ustring);
+
+
+        String nonTrimmedString =       "              Riddhi              ";
+        System.out.println(nonTrimmedString);
+        System.out.println(nonTrimmedString.trim());
+
+        String  trimmedString = nonTrimmedString.trim();
+        System.out.println(trimmedString);
+
+
+        String  R = "Godse";
+        System.out.println(R.substring(1));
+        System.out.println(R.substring(4));
+        System.out.println(R.substring(0));
+        System.out.println(R.substring(1,4));
+
+        String G = "Harry";
+        System.out.println(G.replace('r','p'));
+        System.out.println(G.replace('H','M'));
+
+
+//        Write a program that takes a user's full name as input and prints the total number of characters in it.
+//
+//🧠 Concepts Used: length()
+
+
+        String Name = "Fullname";
+        System.out.println(Name.length());
+
+
+//        2. Convert Case
+//📌 Problem:
+//        Accept a string from the user. Convert and print the string in both lowercase and uppercase.
+//
+//🧠 Concepts Used: toLowerCase(), toUpperCase()
+        
+
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter a string:");
+//        String Shop = sc.nextLine();
+//        String lstring = Shop.toLowerCase();
+//        System.out.println("Lowercase:"+lstring);
+//        String  Ustring = Shop.toUpperCase();
+//        System.out.println("Uppercase:"+Ustring);
+
+
+//        3. Trim and Compare
+//📌 Problem:
+//        Take a string that contains leading and trailing spaces. Trim the string and compare it to a manually trimmed version to check if both are equal.
+//
+//🧠 Concepts Used: trim(), equals()
+
+
+        String Girl = "      Riddhi       ";
+        System.out.println(name.trim());
+
+        String Riddhi = Girl.trim();
+        if (name.equals(Girl.trim())) {
+            System.out.println("Both Strings Are Equals");
+        }
+        else{
+
+            System.out.println("Both Strings Are not Equal");
+        }
+
+        String a = "Java";
+        String b = "Java";
+        System.out.println(a.compareTo(b));
+    }
+
+}
