@@ -1,0 +1,57 @@
+public class Day29 {
+    public static void main(String args[]) {
+
+        int n = 8;//1000
+        int pos = 3;
+        int bitmask = 1 << pos;
+        if ((bitmask & n) == 0) {
+            System.out.println("bit is zero");
+        } else {
+            System.out.println("Bit is non zero");
+
+
+        }
+
+        int m = 5;//0101
+        int position = 3;
+        int Bitmask = 1 << pos;
+        if ((Bitmask & m) == 0) {
+            System.out.println("Bit is zero ");
+        } else {
+            System.out.println("Bit is non zero");
+
+        }
+        int num = 6;//0110
+        int posi = 3;
+        int BITMASK = 0 << 2;
+
+        if ((BITMASK & num) == 0) {
+            System.out.println("Bit is zero");
+        } else {
+            System.out.println("Bit is non zero");
+        }
+
+        int numb = 7;
+        int positi = 2;
+        int bitMask = 1 << positi;
+
+        if ((bitMask & numb) == 0) {
+            System.out.println("bit is zero");
+        } else {
+            System.out.println("bit is non zero");
+        }
+// Set Bit
+        int N = 5; //0101
+        int Pos = 1;
+        int BitMask = 1<<pos;
+        int newNumber = BitMask | n;
+        System.out.println(newNumber);
+//Clear Bit
+        int no = 5; //0101
+        int Position = 2;
+        int BItMask = 1<<pos;
+        int newBItMask = ~(BItMask);
+        int NewNumber = newBItMask & n;
+        System.out.println(NewNumber);
+    }
+}
