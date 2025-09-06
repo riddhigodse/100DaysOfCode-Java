@@ -1,0 +1,46 @@
+import java.util.*;
+
+public class Day30 {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int oper = sc.nextInt();
+        int n = 5; //0101
+        int position = 1;
+        int bitmask = 1 << position;
+
+        if (oper == 1) {
+            int newnumber = bitmask | n;  // set bit
+            System.out.println(newnumber);
+        } else {
+            int notbitmask = ~(bitmask);  // clear bit
+            int Newnumber = notbitmask & n;
+            System.out.println(Newnumber);
+        }
+
+        // Example usage of PowerOfTwoBitmask class inside same file
+        System.out.print("Enter number to check power of 2: ");
+        int checkNum = sc.nextInt();
+        if (PowerOfTwoBitmask.isPowerOfTwo(checkNum)) {
+            System.out.println(checkNum + " is a power of 2");
+        } else {
+            System.out.println(checkNum + " is NOT a power of 2");
+        }
+    }
+}
+
+// this class is not public
+class PowerOfTwoBitmask {
+    public static boolean isPowerOfTwo(int n) {
+        if (n <= 0) return false;
+        int count = 0;
+
+        for (int pos = 0; pos < 32; pos++) {
+            int bitmask = 1 << pos;
+            if ((n & bitmask) != 0) {
+                count++;
+            }
+            if (count > 1) return false;
+        }
+        return count == 1;
+    }
+}
